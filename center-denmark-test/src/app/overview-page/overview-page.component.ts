@@ -15,7 +15,9 @@ export class OverviewPageComponent implements OnInit {
   constructor(private router: Router, private movieService: MovieService) { }
 
   ngOnInit(): void {
-    this.movies = this.movieService.getMovies();
+    this.movieService.getMovies().subscribe(data => {
+      this.movies = data;
+    });
   }
 
   goToDetailPage(movieId: number): void {
