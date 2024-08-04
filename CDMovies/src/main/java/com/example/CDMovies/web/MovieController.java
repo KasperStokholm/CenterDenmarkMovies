@@ -14,7 +14,12 @@ public class MovieController {
         this.movieService = movieService;
     }
 
-    @PostMapping("/addMovie")
+    @GetMapping("/overview")
+    public Iterable<Movie> getMovies(){
+        return movieService.get();
+    }
+
+    @PostMapping("/create")
     public void addMovie(@RequestBody Movie movie){
         movieService.save(movie);
     }

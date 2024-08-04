@@ -1,12 +1,10 @@
 package com.example.CDMovies.model;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
-@Table("movies")
+@Table(name = "movies")
 public class Movie {
 
-    @Id
     private Integer id;
 
     private int year;
@@ -16,7 +14,7 @@ public class Movie {
 
     }
 
-    public Movie(int id, int year, String title, String director, String rating) {
+    public Movie(Integer id, int year, String title, String director, String rating) {
         this.id = id;
         this.year = year;
         this.title = title;
