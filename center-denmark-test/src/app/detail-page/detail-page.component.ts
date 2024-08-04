@@ -21,7 +21,7 @@ export class DetailPageComponent implements OnInit {
 
   ngOnInit(): void {
     const movieId = Number(this.route.snapshot.paramMap.get('id'));
-    this.movie = this.movieService.getMovieById(movieId);
+    this.movieService.getMovieById(movieId);
       if (!this.movie) {
         this.errorMessage = "Movie not found, please return to the overview";
       }
