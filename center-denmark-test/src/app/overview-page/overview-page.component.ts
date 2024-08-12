@@ -20,7 +20,7 @@ export class OverviewPageComponent implements OnInit {
     });
   }
 
-  goToDetailPage(movieId: number): void {
+  goToDetailPage(movieId: BigInt): void {
     this.router.navigate(['/detail', movieId]);
   }
 

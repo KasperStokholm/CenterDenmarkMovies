@@ -13,11 +13,11 @@ public class MovieService {
         this.movieRepository = movieRepository;
     }
 
-    public Iterable<Movie> get(){
+    public Iterable<Movie> read(){
         return movieRepository.findAll();
     }
 
-    public Movie get(Integer id){
+    public Movie read(Integer id){
         return movieRepository.findById(id).orElse(null);
     }
 
@@ -25,7 +25,7 @@ public class MovieService {
         movieRepository.deleteById(id);
     }
 
-    public void save(Movie movie){
+    public void create(Movie movie){
         movieRepository.save(movie);
     }
 }

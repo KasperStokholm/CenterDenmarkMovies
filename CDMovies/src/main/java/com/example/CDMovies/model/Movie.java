@@ -1,10 +1,13 @@
 package com.example.CDMovies.model;
 
+import com.example.CDMovies.repository.MovieRepository;
+import org.springframework.data.domain.Persistable;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Table(name = "movies")
-public class Movie {
+public class Movie{
 
+    @org.springframework.data.annotation.Id
     private Integer id;
 
     private int year;
