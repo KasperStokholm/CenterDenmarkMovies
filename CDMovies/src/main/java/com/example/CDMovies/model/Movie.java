@@ -25,14 +25,14 @@ public class Movie implements Persistable{
         this.rating = rating;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
     @Override
     public boolean isNew() {
         //Should handle whether a movie is new or not
-        return true;
+       return true;
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public void setId(Integer id) {

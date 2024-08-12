@@ -32,7 +32,7 @@ public class MovieController {
     @PostMapping("updateMovie/{id}")
     public void updateMovie(@RequestBody Movie movie, @PathVariable Integer id){
         if(movieService.read(id) != null){
-            movieService.create(movie);
+            movieService.update(id, movie);
         } else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }

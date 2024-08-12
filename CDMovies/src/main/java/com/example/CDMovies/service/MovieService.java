@@ -28,4 +28,9 @@ public class MovieService {
     public void create(Movie movie){
         movieRepository.save(movie);
     }
+
+    public void update(Integer id, Movie movie){
+        movieRepository.delete(movieRepository.findById(id).orElseThrow());
+        movieRepository.save(movie);
+    }
 }
