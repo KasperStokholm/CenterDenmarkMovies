@@ -10,7 +10,7 @@ import { MovieService } from 'src/shared/movie.service';
 })
 export class CreationPageComponent implements OnInit {
 
-  newMovie: Movie = { id: 0, title: '', director: '', year: 0, rating: '' };
+  newMovie: Movie = { id: 0n, title: '', director: '', year: 0, rating: '' };
 
   constructor(private router: Router, private movieService: MovieService) { }
 
