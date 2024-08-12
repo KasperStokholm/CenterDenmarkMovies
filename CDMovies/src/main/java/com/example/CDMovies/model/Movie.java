@@ -5,7 +5,7 @@ import org.springframework.data.domain.Persistable;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Table(name = "movies")
-public class Movie{
+public class Movie implements Persistable{
 
     @org.springframework.data.annotation.Id
     private Integer id;
@@ -23,6 +23,12 @@ public class Movie{
         this.title = title;
         this.director = director;
         this.rating = rating;
+    }
+
+    @Override
+    public boolean isNew() {
+        //Should handle whether a movie is new or not
+       return true;
     }
 
     public Integer getId() {
