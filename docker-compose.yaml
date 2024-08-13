@@ -16,7 +16,7 @@ services:
     image: 'docker-spring-boot-postgres:latest'
     build:
       context: .
-    container_name: app
+    container_name: CDMovies
     depends_on:
       - db
     environment:

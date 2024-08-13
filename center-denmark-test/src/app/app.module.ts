@@ -10,6 +10,7 @@ import { MovieService } from 'src/shared/movie.service';
 import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
@@ -45,7 +46,8 @@ import { MovieGraphComponent } from './movie-graph/movie-graph.component';
     MatInputModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [MovieService],
   bootstrap: [AppComponent]

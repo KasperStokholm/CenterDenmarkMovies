@@ -14,15 +14,15 @@ export class MovieService {
   }
 
   public getMovies(): Observable<Movie[]> {
-    return this.http.get<Movie[]>(this.backendUrl + "/overview");
+    return this.http.get<Movie[]>(this.backendUrl + '/movies');
   }
 
   public createMovie(movie: Movie){
-    return this.http.post<Movie>(this.backendUrl, movie);
+    return this.http.post<Movie>(this.backendUrl + '/createMovie', movie);
   }
 
   getMovieById(id: number): Observable<Movie> {
-    return this.http.get<Movie>(this.backendUrl);
+    return this.http.get<Movie>(this.backendUrl + '/movies/{id}');
   }
 
 
